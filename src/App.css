@@ -1,0 +1,43 @@
+@media only screen and (min-width: 700px) {
+  /* Desktop */
+  .blessing {
+    --rotation: rotate(15deg);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  /* Desktop */
+  .blessing {
+    --rotation: rotate(25deg);
+  }
+}
+
+
+@-webkit-keyframes bless {
+    50% {
+      transform: var(--rotation);
+      -webkit-transform: var(--rotation)
+    }
+    100% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+}
+
+@keyframes bless {
+    50% { 
+      transform: var(--rotation);
+      -webkit-transform: var(--rotation)
+    }
+    100% {
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+    }
+}
+
+.blessing {
+    animation: bless 1s linear forwards;
+    -webkit-animation: bless 1s linear forwards;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+}
